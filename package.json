@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,9 @@
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.31",
     "underscore": "^1.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-strongloop": "^2.1.0"
   }
 }
