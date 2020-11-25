@@ -8,7 +8,7 @@ const loggly = require('loggly');
 
  client.once('ready', () => {
    
-   console.log('Test')
+   console.log('Client Started.')
     //client.user.setActivity(`Use ${prefix}help.`)
    //Logg.log('Client Started.');
  
