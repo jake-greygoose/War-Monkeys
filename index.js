@@ -71,7 +71,7 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
 
   // User Left Discord
   if (oldState.channelID && !newState.channelID) {
-    console.log("USer Left Discord");
+    console.log("User Left Discord");
   }
 });
 
