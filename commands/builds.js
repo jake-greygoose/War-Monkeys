@@ -1,8 +1,6 @@
 "use strict";
-module.exports.run = async (client, message, args) => {
-
-  console.log('Builds Command')
-
+module.exports.run = async (client, message, args, admin, _) => {
+  console.log("Builds Command");
 };
 
 module.exports.help = {
