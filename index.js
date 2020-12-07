@@ -54,6 +54,7 @@ client.on("message", async (message) => {
 });
 
 client.on("voiceStateUpdate", async (oldState, newState) => {
+  let ctime = moment().tz("America/Chicago").format();
   if (newState.member.user.bot) return;
   if (oldState.channelID === newState.channelID) {
     console.log("reconnected");
@@ -71,7 +72,30 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
 
   // User Left Discord
   if (oldState.channelID && !newState.channelID) {
-    console.log("User Left Discord");
+    console.log(
+      `${oldState.member.user.username} Left ${oldState.channel.name} at ${ctime}`
+    );
+    loggly.log(
+      `${oldState.member.user.username} Left ${oldState.channel.name} at ${ctime}`
+    );
+    // Competitive Channel disconnected
+    if (
+      oldState.channelID === OpenRaidChannel.id ||
+      oldState.channelID === ClosedRaidChannel.id
+    ) {
+    }
+    // Social Channel disconnected
+    if (oldState.channelID === SocialChannel.id) {
+    }
+  }
+  // Competitive Channel Connected
+  else if (
+    newState.channelID === OpenRaidChannel.id ||
+    newState.channelID === ClosedRaidChannel.id
+  ) {
+  }
+  // Social Channel Connected
+  else if (newState.channelID === SocialChannel.id) {
   }
 });
 
