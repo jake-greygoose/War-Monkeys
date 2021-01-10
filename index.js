@@ -50,6 +50,7 @@ client.on("message", async (message) => {
   let command = args.shift().toLowerCase();
   let commandModule = client.commands.get(command);
   if (!commandModule) return;
+  
   commandModule.run(client, message, args, admin, _, moment);
 });
 
