@@ -17,6 +17,7 @@
     "loggly": "^1.1.1",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.31",
+    "mysql2": "^2.2.5",
     "node-opus": "^0.3.3",
     "underscore": "^1.11.0"
   },
