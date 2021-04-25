@@ -2,3 +2,5 @@
 node_modules/
 voice.js
 Lofi 30min.opus
+npm-debug.log
+.DS_Store
